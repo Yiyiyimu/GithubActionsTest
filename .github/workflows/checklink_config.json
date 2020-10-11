@@ -8,5 +8,5 @@
     }
   ],
   "retryOn429": true,
-  "aliveStatusCodes":[200, 206, 429]
+  "fallbackRetryDelay": "90s"
 }
