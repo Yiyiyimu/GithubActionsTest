@@ -13,31 +13,31 @@ tags: [Chaos Mesh, Chaos Engineering, Kubernetes, CNCF, Cloud Native]
 We’re thrilled to announce that [Chaos Mesh®](https://github.com/chaos-mesh/chaos-mesh) is now officially accepted as a CNCF Sandbox project. As maintainers of Chaos Mesh, we’d like to thank all the contributors and adopters. This would not be possible without your trust, support, and contributions.
 
 <!--truncate-->
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
-https://github.com/chaos-mesh/chaos-mesh
+[✖] https://github.com/chaos-mesh/chaos-mesh/tree/master/examples → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/examples/network-loss-example.yaml → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/examples/network-delay-example.yaml → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/examples/network-corrupt-example.yaml → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/helm/chaos-mesh/values.yaml → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/tree/master/examples → Status: 429
+[✖] http://github.com/iovisor/bcc/blob/master/tools/inject_example.txt → Status: 429
+[✖] https://github.com/iovisor/bcc/blob/master/tools/inject.py → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/cmd/controller-manager/main.go#L104 → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/helm/chaos-mesh/templates/controller-manager-rbac.yaml → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/config/crd/kustomization.yaml → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/tree/master/api/v1alpha1 → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/blob/master/helm/chaos-mesh/values.yaml → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/481 → Status: 429
+[✖] https://github.com/chaos-mesh/chaos-mesh/pull/665 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/628 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/783 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/415 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/478 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/466 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/506 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/511 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/759 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/794 → Status: 429
+[✖] https://github.com/pingcap/chaos-mesh/pull/776 → Status: 429
 
 Chaos Mesh is a powerful Chaos Engineering platform that orchestrates chaos experiments on Kubernetes environments. By covering comprehensive fault injection methods in Pod, network, file system, and even the kernel, we aim at providing a neutral, universal Chaos Engineering platform that enables cloud-native applications to be as resilient as they should be.
 
