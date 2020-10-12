@@ -5,9 +5,7 @@
     },
     {
       "pattern": ["^http://localhost"]
-    },
-    {
-      "pattern": ["^https://github.com"]
     }
-  ]
+  ],
+  "retryOn429": true
 }
