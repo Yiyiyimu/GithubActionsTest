@@ -12,4 +12,4 @@ jobs:
       - name: Get Tarball
         run: |
           git diff --name-only | xargs echo
-          git diff --name-only "$GITHUB_BASE_REF..$GITHUB_SHA" | xargs echo
+          git diff --name-only "${{ github.base_ref }}..${{ github.event.pull_request.head.sha }}" | xargs echo
