@@ -15,4 +15,4 @@ jobs:
 
       - name: Git diff SHA
         run: |
-        git diff --name-only ${{ github.base_ref }} ${{ github.event.pull_request.head.sha }} | xargs echo
+          git diff --name-only ${{ github.base_ref }} ${{ github.event.pull_request.head.sha }} | xargs echo
