@@ -11,8 +11,7 @@ jobs:
 
       - name: Git diff
         run: |
-          git diff --name-only | xargs echo
-
-      - name: Git diff SHA
-        run: |
-          git diff --name-only ${{ github.base_ref }} ${{ github.event.pull_request.head.sha }} | xargs echo
+          VERSION=$(echo ${GITHUB_REF#refs/heads/})
+          echo $VERSION
+          VERSION=$(echo ${GITHUB_REF#refs/heads/:1})
+          echo $VERSION
