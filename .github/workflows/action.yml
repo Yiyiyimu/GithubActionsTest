@@ -11,4 +11,5 @@ jobs:
 
       - name: Get Tarball
         run: |
-          git ls-files . -m
+          git diff --name-only
+          git diff --name-only "$GITHUB_BASE_REF..$GITHUB_SHA"
