@@ -11,11 +11,11 @@ jobs:
 
       - name: Git diff
         run: |
-          VERSION=${GITHUB_REF#refs/heads/}
+          VERSION=${GITHUB_REF##*/}
           echo $VERSION
-          VERSION=${GITHUB_REF#refs/heads/:1}
+          VERSION=${GITHUB_REF##*/:1}
           echo $VERSION
-          VERSION=$(echo ${GITHUB_REF#refs/heads/})
+          VERSION=$(echo ${GITHUB_REF##*/})
           echo $VERSION
-          VERSION=$(echo ${GITHUB_REF#refs/heads/:1})
+          VERSION=$(echo ${GITHUB_REF##*/:1})
           echo $VERSION
