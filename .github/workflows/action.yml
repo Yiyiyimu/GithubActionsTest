@@ -11,6 +11,10 @@ jobs:
 
       - name: Git diff
         run: |
+          VERSION=${GITHUB_REF#refs/heads/}
+          echo $VERSION
+          VERSION=${GITHUB_REF#refs/heads/:1}
+          echo $VERSION
           VERSION=$(echo ${GITHUB_REF#refs/heads/})
           echo $VERSION
           VERSION=$(echo ${GITHUB_REF#refs/heads/:1})
