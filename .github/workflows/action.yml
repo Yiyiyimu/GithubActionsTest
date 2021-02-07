@@ -13,7 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install luarocks
+      - name: Install Lua
+        uses: leafo/gh-actions-lua@v8
+
+      - name: Install Luarocks
         uses: leafo/gh-actions-luarocks@v4
 
       - name: Extract tag name
