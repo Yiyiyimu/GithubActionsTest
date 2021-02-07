@@ -23,7 +23,6 @@ jobs:
         run: |
           echo ${{ github.ref }}
           echo ${GITHUB_REF##*/}
-          echo ${${GITHUB_REF##*/}:1}
           echo $BRANCH_NAME
           echo $BRANCH
           echo ${{ steps.branch.outputs.branch }}
