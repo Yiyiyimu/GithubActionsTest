@@ -5,6 +5,9 @@ on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: ${GITHUB_REF##*/}
+      BRANCH: ${GITHUB_REF}
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -12,7 +15,9 @@ jobs:
       - name: Test echo
         run: |
           echo ${{ github.ref }}
-          echo ${ ${{ github.ref }}##*/ }
+          echo ${GITHUB_REF##*/}
+          echo BRANCH_NAME
+          echo BRANCH
 
       - name: Publish Artifact
         uses: actions/upload-artifact@v1
