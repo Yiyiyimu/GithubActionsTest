@@ -1,6 +1,6 @@
 name: Build and Release
 
-on: [push, pull_request]
+on: [push]
   #push:
     #tags: ['v*']
     #branches: [master]
