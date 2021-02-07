@@ -35,7 +35,7 @@ jobs:
           draft: false
           prerelease: false
 
-      # use ${tag:1} to filter out the heading "v" of "v1.0"
+      # use ${tag:1} to filter out the heading "v" of "v1.0" 
       - name: Upload to luarocks
         env:
           LUAROCKS_TOKEN: ${{ secrets.LUAROCKS_TOKEN }}
