@@ -2,12 +2,12 @@ package = "lua-resty-etcd-master"
 version = "10.0-0"
 source = {
    url = "git://github.com/iresty/lua-resty-etcd",
-   branch = "master",
+   tag = "v10.0",
 }
 
 description = {
    summary = "Nonblocking Lua etcd driver library for OpenResty",
-   homepage = "https://github.com/iresty/lua-resty-etcd",
+   homepage = "https://github.com/api7/lua-resty-etcd",
    license = "Apache License 2.0",
    maintainer = "Yuansheng Wang <membphis@gmail.com>"
 }
