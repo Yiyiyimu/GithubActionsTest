@@ -1,0 +1,14 @@
+2021/02/05 11:24:39 [notice] 30277#30277: using the "epoll" event method
+2021/02/05 11:24:39 [notice] 30277#30277: openresty/1.19.3.1
+2021/02/05 11:24:39 [notice] 30277#30277: OS: Linux 5.4.51-keao-WSL2+
+2021/02/05 11:24:39 [notice] 30277#30277: getrlimit(RLIMIT_NOFILE): 1024:1048576
+2021/02/05 11:24:39 [info] 30278#30278: *1 [lua] v3.lua:35: _request_uri(): v3 request uri: http://127.0.0.1:2379/v3/kv/put, timeout: 5, client: 127.0.0.1, server: localhost, request: "GET /t HTTP/1.1", host: "localhost"
+2021/02/05 11:24:39 [info] 30278#30278: *1 [lua] v3.lua:367: set(): v3 set body: {"header":{"revision":"12","member_id":"13803658152347727308","raft_term":"2","cluster_id":"8925027824743593106"}}, client: 127.0.0.1, server: localhost, request: "GET /t HTTP/1.1", host: "localhost"
+2021/02/05 11:24:39 [info] 30278#30278: *1 [lua] v3.lua:615: request_chunk(): http request method: POST path: /v3/watch body: {"create_request":{"key":"L3Rlc3Q="}} query: nil, client: 127.0.0.1, server: localhost, request: "GET /t HTTP/1.1", host: "localhost"
+2021/02/05 11:24:39 [info] 30278#30278: *3 [lua] v3.lua:35: _request_uri(): v3 request uri: http://127.0.0.1:2379/v3/kv/put, timeout: 5, context: ngx.timer, client: 127.0.0.1, server: 0.0.0.0:1984
+2021/02/05 11:24:39 [info] 30278#30278: *3 [lua] v3.lua:367: set(): v3 set body: {"header":{"revision":"13","member_id":"13803658152347727308","raft_term":"2","cluster_id":"8925027824743593106"}}, context: ngx.timer, client: 127.0.0.1, server: 0.0.0.0:1984
+2021/02/05 11:24:59 [notice] 30278#30278: signal 15 (SIGTERM) received from 30266, exiting
+2021/02/05 11:24:59 [notice] 30278#30278: signal 3 (SIGQUIT) received from 30266, shutting down
+2021/02/05 11:24:59 [info] 30278#30278: epoll_wait() failed (4: Interrupted system call)
+2021/02/05 11:24:59 [notice] 30278#30278: exiting
+2021/02/05 11:24:59 [notice] 30278#30278: exit
