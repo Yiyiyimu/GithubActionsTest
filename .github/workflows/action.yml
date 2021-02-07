@@ -1,6 +1,6 @@
 name: Release-test
 
-on: [pull_request]
+on: [pull_request, push]
 
 jobs:
   build:
@@ -12,15 +12,21 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: branch
+
       - name: Test echo
         run: |
           echo ${{ github.ref }}
           echo ${GITHUB_REF##*/}
           echo $BRANCH_NAME
           echo $BRANCH
+          echo ${{ steps.branch.outputs.branch }}
 
       - name: Publish Artifact
         uses: actions/upload-artifact@v1
         with:
-          name: release-package-${{ github.ref }}
-          path: ${{ github.ref }}.tgz
+          name: release-package-${{ steps.branch.outputs.branch }}
+          path: ${{ steps.branch.outputs.branch }}.tgz
