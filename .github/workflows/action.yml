@@ -16,8 +16,8 @@ jobs:
         run: |
           echo ${{ github.ref }}
           echo ${GITHUB_REF##*/}
-          echo BRANCH_NAME
-          echo BRANCH
+          echo $BRANCH_NAME
+          echo $BRANCH
 
       - name: Publish Artifact
         uses: actions/upload-artifact@v1
