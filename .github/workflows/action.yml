@@ -28,7 +28,7 @@ jobs:
           echo ${{ steps.branch.outputs.branch }}
 
       - name: Publish Artifact
-        if: ${{ startwith( github.ref, "refs/heads/release" }}
+        if: ${{ startsWith( github.ref, "refs/heads/release" }}
         uses: actions/upload-artifact@v1
         with:
           name: release-package-${{ steps.branch.outputs.branch }}
