@@ -1,5 +1,5 @@
 package = "lua-resty-etcd-master"
-version = "10.0-0-0"
+version = "10.0-0"
 source = {
    url = "git://github.com/iresty/lua-resty-etcd",
    branch = "master",
