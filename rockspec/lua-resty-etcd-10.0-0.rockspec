@@ -1,7 +1,7 @@
-package = "lua-resty-etcd-master"
+package = "lua-resty-etcd"
 version = "10.0-0"
 source = {
-   url = "git://github.com/iresty/lua-resty-etcd",
+   url = "git://github.com/api7/lua-resty-etcd",
    tag = "v10.0",
 }
 
