@@ -9,13 +9,13 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Git diff
+      - name: Test echo
         run: |
-          VERSION=${GITHUB_REF##*/}
-          echo $VERSION
-          VERSION=${GITHUB_REF##*/:1}
-          echo $VERSION
-          VERSION=$(echo ${GITHUB_REF##*/})
-          echo $VERSION
-          VERSION=$(echo ${GITHUB_REF##*/:1})
-          echo $VERSION
+          echo ${{ github.ref }}
+          echo ${ ${{ github.ref }}##*/ }
+
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: release-package-${{ github.ref }}
+          path: ${{ github.ref##*/ }}.tgz
