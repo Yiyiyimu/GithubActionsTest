@@ -1,9 +1,9 @@
 name: Build and Release
 
-on: [push]
-  #push:
-    #tags: ['v*']
-    #branches: [master]
+on:
+  push:
+    tags: ['v*']
+    branches: [master]
 
 jobs:
   release:
