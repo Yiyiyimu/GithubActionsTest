@@ -1,14 +1,21 @@
-name: Build and Release
+name: CI Centos7
 
-on:
-  push:
-    tags:
-      - '*'
+on: [pull_request]
 
 jobs:
-  release:
-    name: Build and Release
+  test_apisix:
+    name: run ci on centos7
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Linux Get dependencies
+      run: sudo apt install -y ruby ruby-dev rubygems build-essential rpm
+
+    - name: run test cases
+      run: |
+        git clone https://github.com/idbeta/build-tools.git
+        cd build-tools
+        git checkout new-method-to-package
+        make package type=rpm app=apisix version=10.10 branch=2.2
+        ls output/
+
