@@ -8,18 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Linux Get dependencies
+    - name: Make rpm package
       run: |
-        sudo apt update
-        sudo apt install -y ruby ruby-dev rubygems build-essential rpm
         sudo gem install --no-document fpm
-        fpm --version
-
-    - name: run test cases
-      run: |
+        # WOULD CHANGE TO MASTER WHEN PR GOT MERGED
         git clone https://github.com/idbeta/build-tools.git
         cd build-tools
         git checkout new-method-to-package
-        make package type=rpm app=apisix version=10.10 branch=2.2
-        ls output/
+        # make package type=rpm app=apisix version=2.3 branch=2.3
+        pwd
+        ls
+
 
