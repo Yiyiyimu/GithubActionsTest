@@ -6,14 +6,13 @@ jobs:
   test_apisix:
     name: run ci on centos7
     runs-on: ubuntu-latest
-
+    env:
+      A: "abcd"
     steps:
     - name: export
       run: |
         export A="abc"
         echo $A
-      env:
-        A: "abc"
 
     - name: print
       run: echo $A
