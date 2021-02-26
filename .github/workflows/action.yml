@@ -6,16 +6,17 @@ jobs:
   test_apisix:
     name: run ci on centos7
     runs-on: ubuntu-latest
-    env:
-      A: "abcd"
     steps:
     - uses: actions/checkout@v2
 
     - name: export
+      id: export
       run: |
         export A="abc"
         echo $A
+        echo "##[set-output name=A;]$(echo "abcd")"
 
     - name: print
       run: |
+        export A=${{ steps.export.outputs.A }}
         ./print.sh
