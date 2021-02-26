@@ -1,4 +1,4 @@
-name: CI Centos7
+name: CI
 
 on: [pull_request]
 
@@ -8,15 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Make rpm package
+    - name: export
       run: |
-        sudo gem install --no-document fpm
-        # WOULD CHANGE TO MASTER WHEN PR GOT MERGED
-        git clone https://github.com/idbeta/build-tools.git
-        cd build-tools
-        git checkout new-method-to-package
-        # make package type=rpm app=apisix version=2.3 branch=2.3
-        pwd
-        ls
+        export A="abc"
+        echo $A
+
+    - name: print
+      run: echo $A
 
 
