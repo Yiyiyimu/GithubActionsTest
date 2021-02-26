@@ -16,6 +16,6 @@ jobs:
         A: "abc"
 
     - name: print
-      run: echo ${{ env.A }}
+      run: echo $A
 
 
