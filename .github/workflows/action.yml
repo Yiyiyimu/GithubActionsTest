@@ -9,10 +9,13 @@ jobs:
     env:
       A: "abcd"
     steps:
+    - uses: actions/checkout@v2
+
     - name: export
       run: |
         export A="abc"
         echo $A
 
     - name: print
-      run: ./print.sh
+      run: |
+        ./print.sh
