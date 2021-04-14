@@ -1,7 +1,11 @@
 name: Cancelling Duplicates
 on:
   workflow_run:
-    workflows: ['Chaos Test']
+    workflows:
+      - 'CI'
+      - 'CI Centos7'
+      - 'Chaos Test'
+      - 'fuzzing'
     types: ['requested']
 
 jobs:
@@ -9,9 +13,16 @@ jobs:
     name: "Cancel duplicate workflow runs"
     runs-on: ubuntu-latest
     steps:
-      - uses: potiuk/cancel-workflow-runs@master
+      - name: "Checkout ${{ github.ref }} ( ${{ github.sha }} )"
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+          submodules: recursive
+
+      - uses: ./.github/actions/get-workflow-origin
         name: "Cancel duplicate workflow runs"
         with:
           cancelMode: allDuplicates
           token: ${{ secrets.GITHUB_TOKEN }}
           sourceRunId: ${{ github.event.workflow_run.id }}
+          skipEventTypes: '["push"]'
