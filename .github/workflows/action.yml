@@ -11,9 +11,9 @@ jobs:
 
       - name: Creating minikube cluster
         run: |
-          pwd
-          ls ..
-          ls ~
-          cd .. && pwd
-          cd ~ && pwd
+          echo "pwd" && pwd
+          echo "ls .." && ls ..
+          echo "ls ~" && ls ~
+          echo "cd .. && pwd" && cd .. && pwd
+          echo "cd ~ && pwd" && cd ~ && pwd
 
