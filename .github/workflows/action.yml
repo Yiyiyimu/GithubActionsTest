@@ -1,9 +1,7 @@
 name: Build and Release
 
 on:
-  push:
-    tags:
-      - '*'
+  pull_request
 
 jobs:
   release:
@@ -12,3 +10,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: print
+        run: |
+          echo ${{ github.head_ref }}
+          echo ${{ github.event.pull_request.number }}
+          echo ${{ github.ref }}
+          echo ci-${{ github.event.pull_request.number || github.ref }}
