@@ -25,4 +25,4 @@ jobs:
 
       - name: sleep
         run: |
-          sleep 100
+          sleep 1000
