@@ -1,15 +1,14 @@
-name: Build and Release
+name: test
 
-on:
-  pull_request
+on: [push, pull_request]
 
 concurrency:
-  group: ${{ github.head_ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  release:
-    name: Build and Release
+  test:
+    name: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,3 +20,9 @@ jobs:
           echo ${{ github.event.pull_request.number }}
           echo ${{ github.ref }}
           echo ci-${{ github.event.pull_request.number || github.ref }}
+          echo ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
+          echo ${{ github.event.pull_request.number || github.ref }}
+
+      - name: sleep
+        run: |
+          sleep 3600
