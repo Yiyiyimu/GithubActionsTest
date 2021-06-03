@@ -25,4 +25,4 @@ jobs:
 
       - name: sleep
         run: |
-          sleep 360
+          sleep 3600
