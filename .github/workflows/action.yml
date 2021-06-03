@@ -8,6 +8,19 @@ concurrency:
 
 jobs:
   test:
+    strategy:
+      fail-fast: false
+      matrix:
+        platform:
+          - ubuntu-18.04
+        os_name:
+          - linux_openresty
+          - linux_openresty_1_17
+          - linux_tengine
+          - linux_apisix_master_luarocks
+          - linux_apisix_current_luarocks
+          - linux_openresty_mtls
+
     name: test
     runs-on: ubuntu-latest
     steps:
