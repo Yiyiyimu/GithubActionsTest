@@ -30,6 +30,7 @@ jobs:
           if [[ $title =~ $re ]]; then
               v=v${BASH_REMATCH[1]}
               echo "##[set-output name=version;]${v}"
+              echo "##[set-output name=version_withou_v;]${BASH_REMATCH[1]}"
           else
               exit 1
           fi
@@ -49,4 +50,4 @@ jobs:
           LUAROCKS_TOKEN: ${{ secrets.LUAROCKS_TOKEN }}
         run: |
           luarocks install dkjson
-          luarocks upload rockspec/githubactionstest-${{ steps.release_env.outputs.version }}-0.rockspec --api-key=${LUAROCKS_TOKEN}
+          luarocks upload rockspec/githubactionstest-${{ steps.release_env.outputs.version_withou_v }}-0.rockspec --api-key=${LUAROCKS_TOKEN}
