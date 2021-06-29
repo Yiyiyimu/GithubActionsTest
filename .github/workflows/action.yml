@@ -2,10 +2,6 @@ name: test
 
 on: [push, pull_request]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref == 'refs/heads/master' && github.run_number || github.event.pull_request.number }}
-  cancel-in-progress: true
-
 jobs:
   test:
     name: test
@@ -16,13 +12,4 @@ jobs:
 
       - name: print
         run: |
-          echo ${{ github.head_ref }}
-          echo ${{ github.event.pull_request.number }}
-          echo ${{ github.ref }}
-          echo ci-${{ github.event.pull_request.number || github.ref }}
-          echo ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
-          echo ${{ github.event.pull_request.number || github.ref }}
-
-      - name: sleep
-        run: |
-          sleep 360
+          echo ${{ github.event.commits[0].message }}
