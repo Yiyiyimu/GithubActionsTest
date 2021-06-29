@@ -1,28 +1,30 @@
-name: test
+name: Release
 
-on: [push, pull_request]
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+on:
+  push:
+    paths:
+      - 'rockspec/**'
 
 jobs:
-  test:
-    name: test
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: print
+      - name: Extract release name
+        id: release_env
+        shell: bash
         run: |
-          echo ${{ github.head_ref }}
-          echo ${{ github.event.pull_request.number }}
-          echo ${{ github.ref }}
-          echo ci-${{ github.event.pull_request.number || github.ref }}
-          echo ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.head_ref || github.sha }}
-          echo ${{ github.event.pull_request.number || github.ref }}
+          title="${{ github.event.head_commit.message }}"
+          re="^feat: release v*(\S+)"
+          if [[ $title =~ $re ]]; then
+              echo "##[set-output name=version;]${BASH_REMATCH[1]}"
+          else
+              exit 1
+          fi
 
-      - name: sleep
+      - name: Print
         run: |
-          sleep 3600
+          echo ${{ steps.release_env.outputs.version }}
