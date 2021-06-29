@@ -14,7 +14,8 @@ jobs:
         id: print
         shell: bash
         run: |
-          title=${echo ${{ github.event.commits[0].message }} | head -1}
+          message=${{ github.event.commits[0].message }}
+          title=$(echo $message | head -1)
           re="^feat: release v*(.*)"
           if [[ $title =~ $re ]]; then
               echo "##[set-output name=version;]${BASH_REMATCH[1]}"
