@@ -14,7 +14,7 @@ jobs:
         id: print
         shell: bash
         run: |
-          message=${{ github.event.commits[0].message }}
+          message="${{ github.event.commits[0].message }}"
           title=$(echo $message | head -1)
           re="^feat: release v*(.*)"
           if [[ $title =~ $re ]]; then
