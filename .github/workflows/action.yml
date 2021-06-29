@@ -48,4 +48,4 @@ jobs:
           LUAROCKS_TOKEN: ${{ secrets.LUAROCKS_TOKEN }}
         run: |
           luarocks install dkjson
-          luarocks upload rockspec/githubactions-${{ steps.release_env.outputs.version }}-0.rockspec --api-key=${LUAROCKS_TOKEN}
+          luarocks upload rockspec/githubactionstest-${{ steps.release_env.outputs.version }}-0.rockspec --api-key=${LUAROCKS_TOKEN}
