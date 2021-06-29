@@ -17,4 +17,3 @@ build = {
       ["tinyyaml"] = "tinyyaml.lua"
    }
 }
-
