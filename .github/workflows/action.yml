@@ -13,3 +13,5 @@ jobs:
       - name: print
         run: |
           echo ${{ github.event.commits[0].message }}
+          echo ${{ github.event.commits[0] }}
+          echo ${{ github.event.commits }}
