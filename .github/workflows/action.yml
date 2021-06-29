@@ -28,3 +28,4 @@ jobs:
       - name: Print
         run: |
           echo ${{ steps.release_env.outputs.version }}
+
