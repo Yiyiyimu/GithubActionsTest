@@ -28,10 +28,3 @@ jobs:
       - name: version
         run: |
           echo ${{ steps.print.outputs.version }}
-
-      - name: exit
-        run: exit 1
-
-      - name: test exit
-        run: echo ${{ steps.print.outputs.version }}
-
