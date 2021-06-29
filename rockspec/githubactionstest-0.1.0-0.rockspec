@@ -1,13 +1,13 @@
-package = "GithubActionsTest"
+package = "githubactionstest"
 version = "0.1.0-0"
 source = {
-   url = "git://github.com/yiyiyimu/GithubActionsTest",
+   url = "git://github.com/yiyiyimu/githubactionstest",
    tag = "v0.1.0"
 }
 
 description = {
-   summary = "GithubActionsTest",
-   homepage = "https://github.com/yiyiyimu/GithubActionsTest",
+   summary = "githubactionstest",
+   homepage = "https://github.com/yiyiyimu/githubactionstest",
    license = "MIT License",
 }
 
