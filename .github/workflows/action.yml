@@ -15,7 +15,6 @@ jobs:
         run: |
           echo ${{ github.ref }}
           echo ${{ github.run_number }}
-
       - name: Sleep
         run: |
           sleep 300
