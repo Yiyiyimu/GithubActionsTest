@@ -8,7 +8,7 @@ concurrency:
 
 jobs:
   test:
-    name: Release
+    name: Actions
     runs-on: ubuntu-latest
     steps:
       - name: Print
